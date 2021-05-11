@@ -79,7 +79,7 @@ kbooked <- function(lc, k){
     
     df <-rbind(df, j)
   }
-  df_2 <- subset(df, df[,1]>k)
+  df_2 <- subset(df, df[,1]>=k)
   return(list(df, df_2))
 }
 
