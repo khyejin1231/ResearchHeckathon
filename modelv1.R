@@ -83,7 +83,7 @@ plotLinkCommMembers(lc, nodes = (names(lc$numclusters)))
 #Analysis
 m_c <- cbind(c_gender,c_location,c_orglevel, c_region)
 c_result <- Analysis(lc,m_c)
-
+cluster_kbooked(lc,3,m_c)
 #############################b.manufacturing
 m_info[,3][which(m_info[,3]<2)] = 0
 m_info[,3][which(m_info[,3]>0)] = m_info[,3][which(m_info[,3]>0)] - 2
@@ -100,5 +100,5 @@ plotLinkCommMembers(lm, nodes = (names(lm$numclusters)))
 
 m_m <- cbind(m_location,m_orglevel, m_tenure)
 m_result <- Analysis(lm,m_m)
-
-#############################c. network, igraph, linkcomm, directedClustering
+cluster_kbooked(lc,3,m_m)
+#############################c. 
